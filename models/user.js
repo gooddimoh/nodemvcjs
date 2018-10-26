@@ -43,17 +43,17 @@ var User = sequelize.define('user', {
 	paranoid: true
 });
 //添加数据
-// User.sync({
-// 	force: false
-// }).then(function() {
-// 	// Table created
-// 	return User.create({
-// 		username: 'admin',
-// 		password: 'admin',
-// 		role: 1,
-// 		name: 'gnip',
-// 		photo: 'http://nos.netease.com/house-public/bf37aa1e955b3a0e3798528fc3bcbd69.jpg'
-// 	});
-// });
+User.sync({
+	force: false
+}).then(function() {
+	// Table created
+	return User.create({
+		username: 'admin',
+		password: 'admin',
+		role: 1,
+		name: 'gnip',
+		photo: 'http://nos.netease.com/house-public/bf37aa1e955b3a0e3798528fc3bcbd69.jpg'
+	});
+});
 
 module.exports = User
