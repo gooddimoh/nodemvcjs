@@ -1,6 +1,6 @@
 /*user model*/
 var Sequelize = require('sequelize')
-var sequelize = require('../common/mysql')
+var Sequelize = require('../common/mysql')
 var User = require('./user')
 var Task = require('./task')
 

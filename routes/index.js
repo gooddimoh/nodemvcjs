@@ -1,6 +1,7 @@
 /**
  * Module dependencies.
  **/
+
 var express = require('express');
 var router = express.Router();
 var task = require('../controllers/task');
@@ -10,14 +11,16 @@ var taskCategory = require('../controllers/task_category');
 var user = require('../controllers/auth');
 
 /*task list*/
-router.get('/task/list', task.list);
-/*task one*/
-router.get('/task/one', task.getOne);
-/*task mod*/
+router.get('/login', function () {
+    return "Stirng";
+});
+
+// router.get('/login', auth.login);
+router.get('/dashboard/index', dashboard.index);
+/*task list*/
+
 router.post('/task/mod/self', task.update);
-/*admin mod*/
 router.post('/task/mod/admin', task.updateAdmin);
-/*task add*/
 router.post('/task/add', task.add);
 
 module.exports = router;
